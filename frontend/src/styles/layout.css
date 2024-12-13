@@ -1,0 +1,535 @@
+/* Header and profile section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #4a154b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-section {
+  position: relative;
+}
+
+/* Username button styling */
+.username-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.username-button:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+/* Welcome message styling */
+.welcome-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+  color: #666;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  z-index: 1000;
+}
+
+/* Regular menu buttons */
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f8fafc;
+}
+
+/* Edit Profile form styling */
+.profile-form {
+  padding: 12px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.1);
+}
+
+/* Form buttons container */
+.form-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Save button */
+.form-buttons button[type="submit"] {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
+/* Cancel button */
+.form-buttons button[type="button"] {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #e2e8f0;
+}
+
+/* Error and success messages */
+.error-message,
+.success-message {
+  font-size: 12px;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.success-message {
+  color: #16a34a;
+  background-color: #dcfce7;
+}
+
+/* Add icons to menu items */
+.dropdown-menu button:first-child::before {
+  content: "✏️";
+}
+
+.dropdown-menu button:last-child::before {
+  content: "🚪";
+}
+
+/* Add a subtle divider between buttons */
+.dropdown-menu button:not(:last-child) {
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 4px;
+  padding-bottom: 8px;
+}
+
+/* Toast customization */
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  box-shadow: 0 4px 12px rgba(74, 21, 75, 0.1) !important;
+}
+
+/* Success toast */
+.Toastify__toast--success {
+  background: #4a154b !important;
+  color: white !important;
+}
+
+/* Success icon specifically */
+.Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+  color: white !important;
+}
+
+/* Override the default success icon color */
+.Toastify__toast--success svg {
+  fill: white !important;
+}
+
+/* Error toast */
+.Toastify__toast--error {
+  background: #e01e5a !important;
+  color: white !important;
+}
+
+/* Info toast */
+.Toastify__toast--info {
+  background: #4a154b !important;
+  color: white !important;
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Close button */
+.Toastify__close-button {
+  color: white !important;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* All toast icons */
+.Toastify__toast-icon {
+  color: white !important;
+}
+
+/* Ensure all SVG icons in toasts are white */
+.Toastify__toast svg {
+  fill: white !important;
+}
+
+.channel-item {
+  position: relative;
+  margin: 2px 0;
+}
+
+.channel-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.channel-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.channel-actions {
+  display: none;
+  gap: 4px;
+}
+
+.channel-link:hover .channel-actions {
+  display: flex;
+}
+
+.channel-action-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.channel-action-btn:hover {
+  opacity: 1;
+}
+
+.channel-action-btn.edit:hover {
+  color: #2196f3;
+}
+
+.channel-action-btn.delete:hover {
+  color: #f44336;
+}
+
+.channel-edit-form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 16px;
+}
+
+.channel-edit-form input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.channel-edit-form button {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.channel-edit-form button:first-of-type {
+  color: #4caf50;
+}
+
+.channel-edit-form button:last-of-type {
+  color: #f44336;
+}
+
+.unread-badge {
+  background-color: #ff4444;
+  color: white;
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 8px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.channel-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar (first column) */
+.sidebar {
+  width: 260px;
+  background-color: #19171D;
+  color: #CCC;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+/* Channel list styles */
+.channel-list li.active {
+  background-color: #4A154B !important;  /* Keep your purple highlight */
+}
+
+.channel-list li:hover {
+  background-color: rgba(74, 21, 75, 0.2);
+}
+
+.channel-list li.active .channel-link,
+.channel-list li.active .channel-name,
+.channel-list li.active .channel-actions button {
+  color: white !important;
+}
+
+/* Content area (includes both messages and thread) */
+.content {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Channel messages column */
+.channel-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-right: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* Message list container */
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  height: calc(100vh - 130px);
+}
+
+/* Message input area */
+.message-input {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: white;
+}
+
+/* Thread panel */
+.thread-panel {
+  width: 400px;
+  border-left: 1px solid #ddd;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Thread header */
+.thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+.thread-header button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Channel header */
+.channel-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+.channel-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Mobile styles - add at the end of your existing CSS */
+@media (max-width: 768px) {
+  .main-content {
+    position: relative;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px; 
+    bottom: 0;
+    width: 100%;
+    background-color: #e4d0ed;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .thread-panel {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .thread-panel.show {
+    transform: translateX(0);
+  }
+
+  /* Mobile navigation buttons */
+  .mobile-nav-button {
+    display: block;
+    padding: 8px 16px;
+    background-color: #4A154B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 8px;
+    cursor: pointer;
+  }
+
+  /* Adjust header for mobile */
+  .header {
+    padding: 0 10px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+}
+
+/* Hide mobile elements on desktop */
+@media (min-width: 769px) {
+  .mobile-nav-button {
+    display: none;
+  }
+
+  .sidebar,
+  .thread-panel {
+    transform: none !important;
+    position: relative !important;
+    top: auto !important;
+  }
+}

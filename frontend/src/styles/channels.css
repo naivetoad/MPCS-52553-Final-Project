@@ -1,0 +1,251 @@
+/* Channel List Container */
+.channel-list {
+  background-color: #f3f3f3;  /* Light grey background */
+  width: 240px;
+  height: 100vh;
+  padding: 16px 0;
+  color: #333333;  /* Dark text for contrast */
+  overflow-y: auto;
+}
+
+.channels-header {
+  padding: 0 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channels-header h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #96989d;
+  margin: 0;
+}
+
+/* Channel List Items */
+.channel-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.channel-list li {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.channel-list li:hover {
+  background-color: rgba(74, 21, 75, 0.2);
+}
+
+.channel-list li.active {
+  background-color: #4A154B !important;
+}
+
+.channel-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #96989d;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.channel-list li:hover a,
+.channel-list li.active a {
+  color: #dcddde;
+}
+
+.channel-list li.active .channel-link,
+.channel-list li.active .channel-name,
+.channel-list li.active .channel-actions button {
+  color: white !important;
+}
+
+/* Optional: Update hover state for non-active items */
+.channel-list li:not(.active):hover .channel-link {
+  color: #4A154B;
+}
+
+/* New Channel Component */
+.new-channel {
+  margin: 8px 16px;
+}
+
+.new-channel-button {
+  background: none;
+  border: none;
+  color: #72767d;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.new-channel-button:hover {
+  color: #dcddde;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.new-channel-form {
+  padding: 8px;
+  background-color: #36393f;
+  border-radius: 4px;
+}
+
+.new-channel-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #202225;
+  background-color: #40444b;
+  color: #dcddde;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.new-channel-form input:focus {
+  outline: none;
+  border-color: #7289da;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.form-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #7289da;
+  color: white;
+  flex: 1;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #677bc4;
+}
+
+.form-buttons button[type="button"] {
+  background-color: #36393f;
+  color: #dcddde;
+  border: 1px solid #202225;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #2f3136;
+}
+
+/* Unread Badge */
+.unread-badge {
+  background-color: #ff4444;
+  color: white;
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 8px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Channel View */
+.channel-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;  /* White background */
+}
+
+.channel-header {
+  padding: 16px;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #ffffff;
+}
+
+.channel-header h2 {
+  color: #333333;
+}
+
+.channel-header h2::before {
+  content: '#';
+  margin-right: 8px;
+  color: #72767d;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4444;
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 14px;
+  background-color: rgba(255, 68, 68, 0.1);
+  border-radius: 4px;
+}
+
+/* Select Channel Message */
+.select-channel-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #72767d;
+  font-size: 16px;
+  background-color: #36393f;
+}
+
+/* Scrollbar Styling */
+.channel-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.channel-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.channel-list::-webkit-scrollbar-thumb {
+  background-color: #202225;
+  border-radius: 4px;
+}
+
+.channel-list::-webkit-scrollbar-thumb:hover {
+  background-color: #2f3136;
+}
+
+@media (max-width: 768px) {
+  .channel-list {
+    width: 100%; /* Override the fixed 240px width */
+    height: calc(100vh - 60px); /* Adjust for header height */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .channel-list ul {
+    width: 100%;
+  }
+
+  .channel-list li {
+    margin: 2px 0; /* Remove horizontal margins */
+    padding: 4px 16px; /* Add more horizontal padding */
+  }
+}
